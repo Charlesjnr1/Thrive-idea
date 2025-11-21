@@ -125,14 +125,16 @@ const Navbar = () => {
       </nav>
 
       {/* Mobile Menu */}
-      <div
-        className={cn(
-          "fixed inset-0 z-40 lg:hidden bg-background/95 backdrop-blur-xl transition-all duration-500 ease-in-out",
-          isMobileMenuOpen
-            ? "opacity-100 pointer-events-auto"
-            : "opacity-0 pointer-events-none"
-        )}
-      >
+{/* Mobile Menu */}
+<div
+  className={cn(
+    "fixed inset-0 z-40 lg:hidden bg-black backdrop-blur-none transition-all duration-500 ease-in-out",
+    isMobileMenuOpen
+      ? "opacity-100 pointer-events-auto"
+      : "opacity-0 pointer-events-none"
+  )}
+>
+
         <div className="container px-4 md:px-6 pt-20 pb-8">
           <div className="flex flex-col space-y-6">
             {navItems.map((item) => (

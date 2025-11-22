@@ -41,31 +41,22 @@ const Navbar = () => {
       >
 
         <div className="container px-4 md:px-6">
-          <div className="flex items-center justify-between h-16">
-            {/* Logo */}
-            <Link
-              to="/"
-              className="flex items-center gap-3 group relative"
-              onClick={() => setIsMobileMenuOpen(false)}
-            >
-              <div className="relative">
-                <div className="w-12 h-12 bg-gradient-to-br from-yellow-400 via-yellow-500 to-yellow-300 rounded-xl flex items-center justify-center group-hover:scale-105 transition-all duration-300 shadow-lg group-hover:shadow-yellow-500/20 relative">
-  <Rocket className="w-6 h-6 text-white transform group-hover:rotate-12 transition-transform duration-300" />
-  <Sparkles className="absolute -top-1 -right-1 w-4 h-4 text-yellow-300 animate-pulse" />
-</div>
+  <div className="flex items-center justify-between h-17">
+    {/* Logo */}
+   {/* Logo */}
+<Link
+  to="/"
+  className="flex items-center"
+  onClick={() => setIsMobileMenuOpen(false)}
+>
+  <img
+    src="/images/me.jpeg"   // or your PNG/SVG version
+    alt="Logo"
+    className="h-16 w-35 object-contain" // increased height from 16 to 20
+    style={{ filter: 'brightness(1.3) contrast(1.4)' }} // makes it pop more
+  />
+</Link>
 
-                <div className="absolute inset-0 bg-gradient-to-r from-primary/20 to-accent/20 rounded-xl blur-sm group-hover:blur-md transition-all duration-300 opacity-0 group-hover:opacity-100" />
-              </div>
-              <div className="flex flex-col">
-                <span className="text-2xl font-bold leading-tight">
-                <span className="text-yellow-700">Thrive</span>
-                <span className="text-white">Nation</span>
-               </span>
-                <span className="text-xs text-muted-foreground font-medium tracking-wider">
-                  INNOVATE • COLLABORATE • ELEVATE
-                </span>
-              </div>
-            </Link>
 
             {/* Desktop Navigation */}
             <div className="hidden lg:flex items-center gap-8">
@@ -125,16 +116,14 @@ const Navbar = () => {
       </nav>
 
       {/* Mobile Menu */}
-{/* Mobile Menu */}
-<div
-  className={cn(
-    "fixed inset-0 z-40 lg:hidden bg-black backdrop-blur-none transition-all duration-500 ease-in-out",
-    isMobileMenuOpen
-      ? "opacity-100 pointer-events-auto"
-      : "opacity-0 pointer-events-none"
-  )}
->
-
+      <div
+        className={cn(
+          "fixed inset-0 z-40 lg:hidden bg-background/95 backdrop-blur-xl transition-all duration-500 ease-in-out",
+          isMobileMenuOpen
+            ? "opacity-100 pointer-events-auto"
+            : "opacity-0 pointer-events-none"
+        )}
+      >
         <div className="container px-4 md:px-6 pt-20 pb-8">
           <div className="flex flex-col space-y-6">
             {navItems.map((item) => (

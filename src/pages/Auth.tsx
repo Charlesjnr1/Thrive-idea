@@ -217,45 +217,39 @@ const Auth = () => {
       <Card className={`w-full max-w-md bg-slate-800/40 backdrop-blur-xl border-slate-700 shadow-2xl transition-all duration-1000 ${
         isVisible ? 'animate-fade-in-up opacity-100' : 'opacity-0 translate-y-10'
       }`}>
-        <CardHeader className="text-center relative">
-          {/* Animated Logo */}
-          <Link to="/" className="flex items-center gap-3 justify-center mb-6 group">
-            <div className="relative">
-              <div className="w-12 h-12 bg-gradient-to-br from-yellow-400 to-amber-500 rounded-xl flex items-center justify-center group-hover:scale-110 transition-all duration-300 shadow-lg group-hover:shadow-yellow-500/20">
-                <Rocket className="w-6 h-6 text-slate-900 transform group-hover:rotate-12 transition-transform duration-300" />
-                <Sparkles className="absolute -top-1 -right-1 w-4 h-4 text-yellow-300 animate-pulse" />
-              </div>
-              <div className="absolute inset-0 bg-gradient-to-r from-yellow-400/20 to-amber-500/20 rounded-xl blur-sm group-hover:blur-md transition-all duration-300 opacity-0 group-hover:opacity-100" />
-            </div>
-            <div className="flex flex-col">
-              <span className="text-2xl font-bold bg-gradient-to-r from-yellow-400 to-amber-500 bg-clip-text text-transparent leading-tight">
-                ThriveNation
-              </span>
-              <span className="text-xs text-slate-400 font-medium tracking-wider">
-                INNOVATE • COLLABORATE • ELEVATE
-              </span>
-            </div>
-          </Link>
-          
-          <CardTitle className="text-2xl text-white">
-            {mode === "login" ? "Welcome Back" : "Join ThriveNation"}
-          </CardTitle>
-          <CardDescription className="text-slate-400">
-            {mode === "login"
-              ? "Continue your journey to success"
-              : "Start your journey to success today"}
-          </CardDescription>
+      <CardHeader className="text-center relative">
+  {/* Logo Container */}
+  <div className="flex flex-col items-center mb-6">
+    
+    
+    {/* Brand text */}
+    <div className="mt-4">
+      <h1 className="text-3xl font-bold bg-gradient-to-r from-amber-400 to-yellow-500 bg-clip-text text-transparent">
+        ThriveNation
+      </h1>
+     
+    </div>
+  </div>
+  
+  <CardTitle className="text-2xl text-white">
+    {mode === "login" ? "Welcome Back" : "Join ThriveNation"}
+  </CardTitle>
+  <CardDescription className="text-slate-400">
+    {mode === "login"
+      ? "Continue your journey to success"
+      : "Start your journey to success today"}
+  </CardDescription>
 
-          {/* Mode Indicator */}
-          <div className="absolute top-4 right-4">
-            <div className="flex items-center gap-2 px-3 py-1 bg-yellow-500/10 rounded-full border border-yellow-400/20">
-              <div className="w-2 h-2 bg-yellow-400 rounded-full animate-pulse" />
-              <span className="text-xs font-medium text-yellow-400">
-                {mode === "login" ? "Login" : "Sign Up"}
-              </span>
-            </div>
-          </div>
-        </CardHeader>
+  {/* Mode Indicator */}
+  <div className="absolute top-4 right-4">
+    <div className="flex items-center gap-2 px-3 py-1 bg-amber-500/10 rounded-full border border-amber-400/20">
+      <div className="w-2 h-2 bg-amber-400 rounded-full animate-pulse" />
+      <span className="text-xs font-medium text-amber-400">
+        {mode === "login" ? "Login" : "Sign Up"}
+      </span>
+    </div>
+  </div>
+</CardHeader>
 
         <CardContent>
           <form onSubmit={mode === "login" ? handleLogin : handleSignUp} className="space-y-5">

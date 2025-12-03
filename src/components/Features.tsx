@@ -105,12 +105,9 @@ const Features = () => {
             <span className="text-sm font-medium text-yellow-400">Premium Features</span>
           </div>
           
-          <h2 className="text-5xl md:text-6xl font-bold mb-6 bg-gradient-to-r from-yellow-400 via-amber-400 to-orange-400 bg-clip-text text-transparent animate-gradient-x">
-            Why Choose{" "}
-            <span className="relative inline-block">
-              ThriveNation
-              <div className="absolute -bottom-2 left-0 w-full h-1 bg-gradient-to-r from-transparent via-yellow-400 to-transparent animate-pulse" />
-            </span>
+          <h2 className="text-5xl md:text-6xl font-bold mb-6 bg-gradient-to-r from-yellow-400 to-orange-400 bg-clip-text text-transparent animate-gradient-x">
+            Why Choose ThriveNation
+          
             ?
           </h2>
           

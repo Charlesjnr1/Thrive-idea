@@ -65,14 +65,14 @@ const Navbar = () => {
                   key={item.path}
                   to={item.path}
                   className={cn(
-                    "relative font-medium transition-all duration-300 group text-white hover:text-yellow-400",
+                    "relative font-medium transition-all duration-300 group text-white ",
                     isActivePath(item.path) && "text-yellow-500"
                   )}
                 >
                   {item.label}
                   <span
                     className={cn(
-                      "absolute -bottom-1 left-0 w-0 h-0.5 bg-yellow-600 transition-all duration-300 group-hover:w-full",
+                      "absolute -bottom-1 left-0 w-0 h-0.5 bg-orange-600 transition-all duration-300 group-hover:w-full",
                       isActivePath(item.path) && "w-full"
                     )}
                   />
@@ -85,13 +85,13 @@ const Navbar = () => {
               <Button
                 asChild
                 variant="ghost"
-                className="font-medium text-white hover:text-yellow-400 hover:bg-yellow-400/10 transition-all duration-300"
+                className="font-medium text-white  hover:bg-yellow-400/10 transition-all duration-300"
               >
                 <Link to="/auth?mode=login">Login</Link>
               </Button>
               <Button
                 asChild
-                className="relative bg-yellow-600 hover:bg-yellow-600 hover:shadow-lg hover:shadow-yellow-500/25 transform hover:scale-105 transition-all duration-300 font-medium group overflow-hidden"
+                className="relative bg-yellow-600  hover:shadow-lg hover:shadow-yellow-500/25 transform hover:scale-105 transition-all duration-300 font-medium group overflow-hidden"
               >
                 <Link to="/auth?mode=signup">
                   <span className="relative z-10">Sign up</span>

@@ -121,7 +121,7 @@ const Features = () => {
   return (
     <section 
       ref={sectionRef}
-      className="relative py-24 bg-gradient-to-br from-slate-900 via-slate-800 to-amber-900/30 overflow-hidden"
+      className="relative py-24 bg-gradient-to-br from-black via-black to-black overflow-hidden"
     >
       {/* Animated Background Elements */}
       <div className="absolute inset-0 z-0">
@@ -155,10 +155,7 @@ const Features = () => {
         <div className={`text-center mb-16 transition-all duration-1000 ${
           isVisible ? 'animate-fade-in-up opacity-100' : 'opacity-0 translate-y-10'
         }`}>
-          <div className="inline-flex items-center gap-2 px-4 py-2 bg-yellow-500/10 backdrop-blur-sm rounded-full mb-4 border border-yellow-400/20">
-            <Sparkles className="w-4 h-4 text-yellow-400 animate-pulse" />
-            <span className="text-sm font-medium text-yellow-400">Premium Features</span>
-          </div>
+          
           
           <h2 className="text-5xl md:text-6xl font-bold mb-6 bg-gradient-to-r from-yellow-400 via-amber-400 to-orange-400 bg-clip-text text-transparent animate-gradient-x">
             Why Choose ThriveNation
@@ -245,30 +242,8 @@ const Features = () => {
               </div>
             ))}
           </div>
-
-          {/* Scroll Speed Indicator */}
-          <div className="absolute bottom-4 left-1/2 transform -translate-x-1/2 z-20">
-            <div className="flex items-center gap-2 px-3 py-2 bg-slate-800/60 backdrop-blur-sm rounded-lg border border-slate-700">
-              <div className={`w-2 h-2 rounded-full ${scrollPaused ? 'bg-slate-500' : 'bg-yellow-400 animate-pulse'}`} />
-              <span className="text-xs text-slate-400">
-                {scrollPaused ? 'Paused • Hover to resume' : 'Auto-scrolling • Hover to pause'}
-              </span>
-            </div>
-          </div>
         </div>
 
-        {/* Bottom CTA */}
-        <div className={`text-center mt-16 transition-all duration-1000 delay-800 ${
-          isVisible ? 'animate-fade-in-up opacity-100' : 'opacity-0 translate-y-10'
-        }`}>
-          <div className="inline-flex items-center gap-4 px-8 py-4 bg-slate-800/60 backdrop-blur-xl rounded-2xl border border-slate-700 hover:border-yellow-400/50 transition-all duration-300 group cursor-pointer hover:scale-105">
-            <Zap className="w-6 h-6 text-yellow-400 group-hover:scale-110 transition-transform duration-300" />
-            <span className="text-lg font-semibold text-white">
-              Ready to transform your ideas into reality?
-            </span>
-            <ArrowRight className="w-5 h-5 text-yellow-400 group-hover:translate-x-2 transition-transform duration-300" />
-          </div>
-        </div>
       </div>
 
       {/* Bottom Gradient */}

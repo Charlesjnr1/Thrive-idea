@@ -56,12 +56,6 @@ const CallToAction = () => {
           
           {/* Elegant Header */}
           <div className="mb-12">
-            <div className="inline-flex items-center gap-3 px-6 py-3 bg-white/5 backdrop-blur-sm rounded-2xl border border-amber-400/20 mb-8">
-              <Sparkles className="w-5 h-5 text-amber-400" />
-              <span className="text-lg font-semibold text-amber-400">Your Success Starts Here</span>
-              <div className="w-2 h-2 bg-amber-400 rounded-full animate-pulse" />
-            </div>
-
             <h2 className="text-5xl md:text-6xl font-bold mb-6 text-white">
               Where Vision Meets
               <span className="block bg-gradient-to-r from-amber-400 via-yellow-400 to-orange-400 bg-clip-text text-transparent mt-2">
@@ -75,40 +69,7 @@ const CallToAction = () => {
             </p>
           </div>
 
-          {/* CTA Section */}
-          <div className="bg-gradient-to-r from-slate-800/50 to-slate-900/50 backdrop-blur-sm rounded-3xl p-8 border border-slate-700 max-w-2xl mx-auto">
-            <div className="flex flex-col sm:flex-row items-center justify-between gap-6">
-              <div className="text-left">
-                <h3 className="text-2xl font-bold text-white mb-2">Ready to Begin?</h3>
-                <p className="text-slate-300">Join thousands already building their future</p>
-              </div>
-              
-              <div className="flex flex-col sm:flex-row gap-4">
-                <Button 
-                  asChild 
-                  size="lg"
-                  className="bg-gradient-to-r from-amber-400 to-orange-400 hover:from-amber-500 hover:to-orange-500 text-slate-900 font-semibold px-8 py-6 rounded-xl transition-all duration-300 hover:scale-105 shadow-lg hover:shadow-amber-500/25"
-                >
-                  <Link to="/auth" className="flex items-center gap-2">
-                    Get Started Free
-                    <ArrowRight className="w-5 h-5 group-hover:translate-x-1 transition-transform" />
-                  </Link>
-                </Button>
-
-                <Button 
-                  asChild 
-                  size="lg"
-                  variant="outline"
-                  className="border-slate-600 text-slate-300 hover:bg-slate-800 hover:text-white font-semibold px-8 py-6 rounded-xl transition-all duration-300"
-                >
-                  <Link to="/discover">
-                    View Success Stories
-                  </Link>
-                </Button>
-              </div>
-            </div>
-          </div>
-
+          
           {/* Trust Metrics */}
           <div className="mt-12 flex flex-wrap justify-center gap-8 text-slate-400">
             <div className="flex items-center gap-2">

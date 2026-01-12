@@ -82,11 +82,6 @@ const HowItWorks = () => {
         <div className={`text-center mb-16 transition-all duration-1000 ${
           isVisible ? 'animate-fade-in-up opacity-100' : 'opacity-0 translate-y-10'
         }`}>
-          <div className="inline-flex items-center gap-2 px-4 py-2 bg-amber-500/10 rounded-full mb-4 border border-amber-400/20">
-            <Play className="w-4 h-4 text-amber-600" />
-            <span className="text-sm font-medium text-amber-600">Simple Process</span>
-          </div>
-          
           <h2 className="text-4xl md:text-5xl font-bold mb-4 text-slate-800">
             How It Works
           </h2>
@@ -186,38 +181,6 @@ const HowItWorks = () => {
               <span className="text-sm font-medium text-slate-700">{feature.text}</span>
             </div>
           ))}
-        </div>
-
-        {/* CTA Section */}
-        <div className={`text-center transition-all duration-1000 delay-700 ${
-          isVisible ? 'animate-fade-in-up opacity-100' : 'opacity-0 translate-y-10'
-        }`}>
-          <div className="bg-gradient-to-r from-amber-400 to-orange-400 rounded-3xl p-8 text-white max-w-2xl mx-auto shadow-lg">
-            <h3 className="text-2xl font-bold mb-3">Ready to Get Started?</h3>
-            <p className="text-amber-100 mb-6 max-w-md mx-auto">
-              Join thousands of entrepreneurs and investors already transforming their futures
-            </p>
-            <div className="flex flex-col sm:flex-row gap-4 justify-center">
-              <Button 
-                asChild 
-                className="bg-white text-amber-600 hover:bg-amber-50 font-semibold px-8 py-3 rounded-xl transition-all duration-300 hover:scale-105 shadow-lg"
-              >
-                <Link to="/auth">
-                  Create Account
-                  <ArrowRight className="ml-2 w-4 h-4" />
-                </Link>
-              </Button>
-              <Button 
-                asChild 
-                variant="outline"
-                className="border-white text-white hover:bg-white/10 font-semibold px-8 py-3 rounded-xl transition-all duration-300"
-              >
-                <Link to="/discover">
-                  Browse Ideas
-                </Link>
-              </Button>
-            </div>
-          </div>
         </div>
       </div>
     </section>
